@@ -1,0 +1,37 @@
+##Problem in the code
+numbers = [1, 2, 3, 4, 5]
+for i in range(len(numbers)):
+    if i % 2 == 0:
+        numbers.remove(i)
+print(numbers)
+
+
+#The loop uses i as an index, but remove(i) removes the value i (not the element at index i).
+#Example: when i = 0, it removes the value 0 (which doesn’t even exist in the list).
+#Removing items from a list while iterating through it causes index shifting, so some elements are skipped.
+
+
+
+##What will it output?
+
+#It will remove values 0, 2, 4 if they exist — but only 2 and 4 are present.
+#So the final list will be:
+
+[1, 3, 5]
+
+
+
+##Correct way to remove even numbers
+
+Option 1: Use list comprehension (best & cleanest)
+
+numbers = [1, 2, 3, 4, 5]
+numbers = [num for num in numbers if num % 2 != 0]
+print(numbers)   # [1, 3, 5]
+
+
+Option 2: Use filter()
+
+numbers = [1, 2, 3, 4, 5]
+numbers = list(filter(lambda x: x % 2 != 0, numbers))
+print(numbers)   # [1, 3, 5]
