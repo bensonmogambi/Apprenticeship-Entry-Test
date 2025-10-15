@@ -1,0 +1,32 @@
+def calculate_total_sales(data):
+    """
+    Calculates total revenue from a list of sales items.
+    Each item has 'price' and 'quantity'.
+    """
+    total = 0
+    for item in data:
+        total += item["price"] * item["quantity"]
+    return total
+
+
+# For Example
+sales_data = [
+    {"item": "Pen", "price": 20, "quantity": 3},
+    {"item": "Book", "price": 200, "quantity": 2},
+    {"item": "Bag", "price": 800, "quantity": 1}
+]
+
+print("Total Revenue:", calculate_total_sales(sales_data))
+
+
+
+
+#Output
+Total Revenue: 1240
+
+
+
+
+##Explanation
+#The function loops through each product, multiplies price × quantity, and adds it to a running total. Finally, it returns the total revenue.
+
