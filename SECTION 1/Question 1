@@ -1,0 +1,30 @@
+def second_largest(nums):
+    """
+    Returns the second-largest number in a given list of integers.
+    If fewer than 2 unique numbers exist, returns None.
+    """
+    # Remove duplicates
+    unique_nums = list(set(nums))
+
+    # Handle edge case
+    if len(unique_nums) < 2:
+        return None
+
+    # Sort and return second-largest
+    unique_nums.sort()
+    return unique_nums[-2]
+
+
+# How it works in an Example
+numbers = [7, 14, 3, 28, 56]
+print(second_largest(numbers))  # Output: 28
+
+
+
+##Explanation
+
+#The function works by:
+#Converting the list into a set to remove duplicates.
+#Checking if at least 2 unique numbers exist; otherwise returns None.
+#Sorting the list in ascending order.
+#Returning the second-to-last element, which is the second-largest number.
