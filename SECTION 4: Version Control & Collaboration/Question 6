@@ -1,0 +1,11 @@
+1. How I use Git to collaborate
+
+When working with a team, we use Git to track changes, share code, and avoid overwriting each other’s work. Each developer works on a separate branch, then we push the changes to a remote repository (e.g., GitHub). After testing, we merge the branch into main through a pull request.
+
+2. One common Git command I use
+
+git pull → I use this often to update my local code with the latest changes from the team so that I’m always working with the most recent version.
+
+3. One problem I faced & solution
+
+Sometimes I faced merge conflicts when two people edited the same file. I solved it by carefully reviewing the conflicting sections, choosing which changes to keep, testing the code after fixing, and then committing the resolved file.
