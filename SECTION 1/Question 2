@@ -1,0 +1,10 @@
+If a page loads too slowly, here are common causes and fixes:
+
+Large Images – Images that aren’t compressed make the page heavy.
+- Fix: Compress and resize images, use modern formats like WebP.
+
+Too Many HTTP Requests – Too many scripts, CSS files, or assets increase load time.
+- Fix: Combine/minify CSS & JavaScript files, and use caching/CDN.
+
+Slow Database Queries – Unoptimized queries can delay responses.
+- Fix: Add proper indexes, reduce unnecessary queries, and use caching for repeated data.
